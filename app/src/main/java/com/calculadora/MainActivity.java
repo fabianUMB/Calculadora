@@ -91,22 +91,18 @@ public class MainActivity extends ActionBarActivity {
         Lblres.setText(resultado);
     }
 
-    public void dividir (View view) {
-        String valor1 = Val1.getText().toString();
-        String valor2 = Val2.getText().toString();
+public void dividir (View view) {
+    String valor1 = Val1.getText().toString();
+    String valor2 = Val2.getText().toString();
 
-        int num1 = Integer.parseInt(valor1);
-        int num2 = Integer.parseInt(valor2);
-        if (num1 >= num2){
-            int division = num1 / num2; //Verifica quel dividendo sea mayor o igual que el divisor
-            String resultado = String.valueOf(division);
-            Lblres.setText(resultado);
-        else 
-         Lblres.setText("Error. La división no es posible");
-        
-            
-        }
-
+    int num1 = Integer.parseInt(valor1);
+    int num2 = Integer.parseInt(valor2);
+    if(num2 == 0 ) {
+        Lblres.setText("La division por cero no es posible.");
+    } else {
+        int division = num1 / num2;
+        String resultado = String.valueOf(division);
+        Lblres.setText(resultado);
     }
 
 
