@@ -97,10 +97,15 @@ public class MainActivity extends ActionBarActivity {
 
         int num1 = Integer.parseInt(valor1);
         int num2 = Integer.parseInt(valor2);
-        int division = num1 / num2;
-
-        String resultado = String.valueOf(division);
-        Lblres.setText(resultado);
+        if (num1 >= num2){
+            int division = num1 / num2; //Verifica quel dividendo sea mayor o igual que el divisor
+            String resultado = String.valueOf(division);
+            Lblres.setText(resultado);
+        else 
+         Lblres.setText("Error. La división no es posible");
+        
+            
+        }
 
     }
 
